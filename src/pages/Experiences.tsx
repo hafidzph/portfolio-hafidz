@@ -25,27 +25,33 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   description,
   icon,
 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-    className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-  >
-    <div className="flex items-center mb-4">
-      <div className="bg-blue-600 rounded-full p-3 mr-4">{icon}</div>
-      <div>
-        <h3 className="text-xl font-bold text-white">{title}</h3>
-        <p className="text-blue-400">{company}</p>
-      </div>
+  <div className="relative pl-16">
+    <div className="absolute left-0 top-0 bg-blue-600 rounded-full p-3 ring-4 ring-gray-900">
+      {icon}
     </div>
-    <p className="text-gray-400 mb-2">{duration}</p>
-    <p className="text-gray-400 mb-4">{location}</p>
-    <ul className="list-disc list-inside text-gray-300 space-y-2">
-      {description.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
-  </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+    >
+      <h3 className="text-xl font-bold text-white">{title}</h3>
+      <p className="text-blue-400 mb-3">{company}</p>
+      <p className="text-gray-400 mb-1">{duration}</p>
+      <p className="text-gray-400 mb-4">{location}</p>
+      <ul className="space-y-3">
+        {description.map((item, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white">
+              {index + 1}
+            </span>
+            <span className="text-gray-300">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  </div>
 );
 
 export function Experience() {
@@ -141,10 +147,13 @@ export function Experience() {
           </div>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          {experiences.map((exp, index) => (
-            <ExperienceItem key={index} {...exp} />
-          ))}
+        <div className="relative max-w-3xl">
+          <div className="absolute left-6 top-3 bottom-3 w-px bg-blue-500/40"></div>
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <ExperienceItem key={index} {...exp} />
+            ))}
+          </div>
         </div>
       </div>
     </PageWrapper>
