@@ -22,16 +22,6 @@ export function Projects() {
       featured: false,
     },
     {
-      title: "MagZeen",
-      description:
-        "A news platform offering a clean and user-friendly interface for local and international stories.",
-      image: "/placeholder.svg?height=400&width=600",
-      link: "https://github.com/hafidzph/magzeen.git",
-      tags: ["Web Development"],
-      featured: false,
-    },
-
-    {
       title: "T-CAT",
       description:
         "A desktop application for cinema ticket booking, along with food and beverage ordering, built using Java GUI.",
@@ -41,26 +31,20 @@ export function Projects() {
       featured: false,
     },
     {
-      title: "IKEAH",
+      title: "Sabha Koffie POS",
       description:
-        "A simple e-commerce platform for browsing and purchasing products with ease.",
-      link: "https://github.com/hafidzph/IKEAH.git",
-      tags: ["Web Application", "E-commerce"],
+        "A point-of-sale system for a coffee shop, built to manage transactions, menu items, and orders.",
+      image: "/sabha-koffie.svg",
+      link: "#",
+      tags: ["Flutter", "Dart", "POS System"],
       featured: false,
-    },
-    {
-      title: "Thoughts-Gather",
-      description:
-        "A simple forum platform where users can create, share, and discuss topics in an easy-to-use interface.",
-      link: "https://github.com/hafidzph/thougths-gather-app.git",
-      tags: ["Web Application", "Forum"],
-      featured: false,
+      status: "in-progress" as const,
     },
   ];
 
   return (
     <PageWrapper>
-      <div className="max-w-6xl mx-auto pt-32 pb-10 px-14 md:px-20 xl:px-10">
+      <div className="max-w-6xl mx-auto pt-32 pb-10 px-4 sm:px-6 md:px-10 lg:px-14 xl:px-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white mb-5">
             Projects

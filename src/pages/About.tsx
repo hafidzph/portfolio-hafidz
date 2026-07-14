@@ -4,19 +4,26 @@ import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
 
 const skills: string[] = [
-  "React",
-  "Node.js",
+  "React.js",
   "Next.js",
-  "Express",
+  "JavaScript",
   "TypeScript",
-  "MongoDB",
+  "HTML5 & CSS3",
   "Tailwind CSS",
+  "Redux",
+  "React Query",
+  "Ant Design",
+  "Bootstrap",
+  "Node.js",
+  "Express.js",
+  "Kotlin",
+  "Git",
 ];
 
 export function About() {
   return (
     <PageWrapper>
-      <div className="max-w-6xl mx-auto px-12 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-24 md:py-32">
         <div className="space-y-12 sm:space-y-16">
           <div className="text-start">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tighter text-white mb-4">
@@ -42,17 +49,15 @@ export function About() {
 
             <div className="space-y-6 sm:space-y-8">
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                I am a web developer with experience in{" "}
-                <span className="text-blue-400">React</span>,{" "}
-                <span className="text-green-400">Node.js</span>, and modern web
-                technologies. With a strong foundation in front-end development
-                and a deep understanding of user experience, I specialize in
-                creating responsive and intuitive web applications. My passion
-                lies in creating clean, efficient code and building seamless
-                digital experiences that deliver real impact.
+                Front-End Developer with hands-on experience building and maintaining scalable web applications in a 
+government environment, including systems for Direktorat Jenderal Bea dan Cukai. Skilled in developing 
+high-performance, responsive interfaces using modern web technologies and micro frontend architecture.
+Possesses additional experience in backend integration and Android development, enabling contributions 
+across the full development lifecycle. A fast learner who thrives in collaborative teams, with a strong focus on 
+delivering reliable, efficient, and user-centric solutions.
               </p>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                 {skills.map((skill) => (
                   <SkillsItem skill={skill} key={skill} />
                 ))}

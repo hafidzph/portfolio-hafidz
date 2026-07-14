@@ -9,6 +9,7 @@ import {
   Mail,
   Code,
   BadgeIcon as Certificate,
+  Briefcase,
   Menu,
 } from "lucide-react";
 
@@ -21,6 +22,11 @@ import { NavLink, useLocation } from "react-router";
 const sections = [
   { id: "/", label: "Home", icon: <Home className="h-4 w-4" /> },
   { id: "/about", label: "About", icon: <User className="h-4 w-4" /> },
+  {
+    id: "/experience",
+    label: "Experience",
+    icon: <Briefcase className="h-4 w-4" />,
+  },
   {
     id: "/projects",
     label: "Projects",

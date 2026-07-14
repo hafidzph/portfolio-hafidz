@@ -63,7 +63,7 @@ const achievements = [
 export function Certificates() {
   return (
     <PageWrapper>
-      <div className="max-w-6xl mx-auto pt-32 pb-10 px-12 lg:px-20">
+      <div className="max-w-6xl mx-auto pt-32 pb-10 px-4 sm:px-6 lg:px-20">
         <h2 className="text-4xl font-bold text-center text-white mb-12">
           Achievements & Certifications
         </h2>

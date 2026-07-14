@@ -32,7 +32,7 @@ export function Contact() {
 
   return (
     <PageWrapper>
-      <div className="max-w-7xl mx-auto py-24 xl:mt-5 px-16 xl:px-20">
+      <div className="max-w-7xl mx-auto py-24 xl:mt-5 px-4 sm:px-8 md:px-12 xl:px-20">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
             <div>

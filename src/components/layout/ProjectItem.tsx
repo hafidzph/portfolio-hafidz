@@ -24,12 +24,13 @@ interface ProjectItemProps {
     title: string;
     description: string;
     link: string;
+    status?: "in-progress";
   };
 }
 
 export function ProjectItem({
   index,
-  project: { image, tags, title, description, link },
+  project: { image, tags, title, description, link, status },
 }: ProjectItemProps) {
   return (
     <motion.div
@@ -49,6 +50,11 @@ export function ProjectItem({
       <div className="relative h-full z-20 p-6 flex flex-col justify-end">
         <div className="space-y-4">
           <div className="flex flex-wrap gap-2">
+            {status === "in-progress" && (
+              <Badge className="bg-amber-500/90 text-gray-900 hover:bg-amber-500/90">
+                In Progress
+              </Badge>
+            )}
             {tags.map((tag) => (
               <Badge
                 key={tag}
@@ -67,14 +73,21 @@ export function ProjectItem({
             <p className="text-gray-300 line-clamp-3">{description}</p>
           </div>
 
-          <a
-            href={link}
-            target="_blank"
-            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors cursor-pointer"
-          >
-            View Project
-            <ArrowUpRight className="w-4 h-4" />
-          </a>
+          {link !== "#" ? (
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors cursor-pointer"
+            >
+              View Project
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+          ) : (
+            <span className="inline-flex items-center gap-2 text-gray-400">
+              Repository not public yet
+            </span>
+          )}
         </div>
       </div>
     </motion.div>

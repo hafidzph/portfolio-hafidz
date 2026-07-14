@@ -1,6 +1,12 @@
 import { PageWrapper } from "../components/layout/PageWrapper";
 import { motion } from "framer-motion";
-import { FaAndroid, FaDatabase, FaCode, FaGlobe } from "react-icons/fa";
+import {
+  FaAndroid,
+  FaDatabase,
+  FaCode,
+  FaGlobe,
+  FaBriefcase,
+} from "react-icons/fa";
 
 interface ExperienceItemProps {
   title: string;
@@ -44,6 +50,22 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 
 export function Experience() {
   const experiences = [
+    {
+      title: "Frontend Developer",
+      company: "PT Daro Data Teknologi",
+      duration: "02/2025 – Present",
+      location: "Jakarta, Indonesia",
+      description: [
+        "Assigned to Direktorat Jenderal Bea dan Cukai, focusing on maintaining and enhancing the CEISA 4.0 web application.",
+        "Maintained and enhanced multiple Micro Frontend (Micro FE) components to ensure system stability and scalability.",
+        "Diagnosed, analyzed, and resolved production issues through efficient code-level fixes, improving application performance and reliability.",
+        "Developed and delivered a new Micro Frontend module to support feature expansion and system modernization initiatives.",
+        "Collaborated cross-functionally with System Analysts (SA) and Backend Engineers (BE) to ensure seamless API integration and data consistency.",
+        "Performed ongoing bug fixing, system maintenance, and performance optimization across various application modules.",
+        "Utilized Git and GitLab for version control and repository management to maintain code quality and streamline collaboration.",
+      ],
+      icon: <FaBriefcase className="text-white text-2xl" />,
+    },
     {
       title: "Android Engineer",
       company: "Binar Academy",
@@ -108,7 +130,7 @@ export function Experience() {
 
   return (
     <PageWrapper>
-      <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12">
         <div className="text-start mb-12">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight tracking-tighter text-white">
             Experience

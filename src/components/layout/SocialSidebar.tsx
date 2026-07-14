@@ -7,7 +7,7 @@ import {
 
 export function SocialSidebar() {
   return (
-    <div className="fixed left-4 top-1/2 transform -translate-y-1/2 flex flex-col items-center space-y-4 z-10">
+    <div className="hidden lg:flex fixed left-4 top-1/2 transform -translate-y-1/2 flex-col items-center space-y-4 z-10">
       {[
         {
           href: "https://github.com/hafidzph",
