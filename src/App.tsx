@@ -10,6 +10,7 @@ import { AnimatePresence } from "motion/react";
 import { Services } from "./pages/Services";
 import { Certificates } from "./pages/Certificates";
 import { Experience } from "./pages/Experiences";
+import { NotFound } from "./pages/NotFound";
 import { asset } from "./lib/utils";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/certificates" element={<Certificates />} />
             <Route path="/experience" element={<Experience />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </TooltipProvider>
