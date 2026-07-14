@@ -10,14 +10,18 @@ import { AnimatePresence } from "motion/react";
 import { Services } from "./pages/Services";
 import { Certificates } from "./pages/Certificates";
 import { Experience } from "./pages/Experiences";
+import { asset } from "./lib/utils";
 
 function App() {
   return (
     <main
-      className="min-h-screen bg-gradient-to-br from-gray-800 via-gray-800 to-blue-900 
+      className="min-h-screen bg-gradient-to-br from-gray-800 via-gray-800 to-blue-900
     bg-[length:200%_200%] animate-gradient-move flex flex-col gap-24"
     >
-      <div className="fixed inset-0 w-full h-screen bg-[url('/church-on-sunday.svg')] opacity-10 pointer-events-none "></div>
+      <div
+        className="fixed inset-0 w-full h-screen opacity-10 pointer-events-none"
+        style={{ backgroundImage: `url(${asset("/church-on-sunday.svg")})` }}
+      ></div>
       <TooltipProvider>
         <Header />
         <SocialSidebar />

@@ -1,5 +1,6 @@
 import { PageWrapper } from "../components/layout/PageWrapper";
 import { ProjectItem } from "@/components/layout/ProjectItem";
+import { asset } from "@/lib/utils";
 
 export function Projects() {
   const projects = [
@@ -7,7 +8,7 @@ export function Projects() {
       title: "K-Etik Website",
       description:
         "A streamlined platform for managing and submitting research ethics documents, designed to enhance efficiency and compliance with ethical standards.",
-      image: "/k-etik.png",
+      image: asset("/k-etik.png"),
       tags: ["Web Development"],
       link: "https://github.com/hafidzph/komite-etik-UY.git",
       featured: true,
@@ -16,7 +17,7 @@ export function Projects() {
       title: "Shinzou",
       description:
         "An Android app for easy flight bookings, helping users find and book tickets effortlessly.",
-      image: "/shinzou.png",
+      image: asset("/shinzou.png"),
       link: "https://github.com/hafidzph/Shinzou.git",
       tags: ["Android Development"],
       featured: false,
@@ -25,7 +26,7 @@ export function Projects() {
       title: "T-CAT",
       description:
         "A desktop application for cinema ticket booking, along with food and beverage ordering, built using Java GUI.",
-      image: "/T-CAT.png",
+      image: asset("/T-CAT.png"),
       link: "https://github.com/hafidzph/T-CAT.git",
       tags: ["Desktop Development"],
       featured: false,
@@ -34,7 +35,7 @@ export function Projects() {
       title: "Sabha Koffie POS",
       description:
         "A point-of-sale system for a coffee shop, built to manage transactions, menu items, and orders.",
-      image: "/sabha-koffie.svg",
+      image: asset("/sabha-koffie.svg"),
       link: "#",
       tags: ["Flutter", "Dart", "POS System"],
       featured: false,

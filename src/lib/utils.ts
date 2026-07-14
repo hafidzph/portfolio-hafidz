@@ -11,3 +11,7 @@ export const scrollToSection = (id: string) => {
     element.scrollIntoView({ behavior: "smooth" });
   }
 };
+
+export function asset(path: string) {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+}

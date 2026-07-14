@@ -2,6 +2,7 @@ import { SkillsItem } from "@/components/layout/SkillsItem";
 import { PageWrapper } from "../components/layout/PageWrapper";
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
+import { asset } from "@/lib/utils";
 
 const skills: string[] = [
   "React.js",
@@ -40,7 +41,7 @@ export function About() {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-200"></div>
               <div className="relative h-full">
                 <img
-                  src="/hafidz.jpg"
+                  src={asset("/hafidz.jpg")}
                   alt="Profile"
                   className="w-full h-full object-cover object-[center_95%] rounded-lg shadow-xl transform transition duration-200 group-hover:scale-[1.02]"
                 />
@@ -64,7 +65,7 @@ delivering reliable, efficient, and user-centric solutions.
               </div>
 
               <motion.a
-                href="/Hafidz Putra Herlyansyah - CV.pdf"
+                href={asset("/Hafidz Putra Herlyansyah - CV.pdf")}
                 download
                 className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-blue-700 text-white text-sm sm:text-base font-semibold rounded-lg shadow-md hover:bg-blue-800 transition duration-300 ease-in-out w-full sm:w-auto justify-center"
                 whileHover={{ scale: 1.03 }}
