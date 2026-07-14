@@ -141,7 +141,7 @@ export function Experience() {
           <h2 className="text-4xl md:text-5xl font-bold leading-tight tracking-tighter text-white">
             Experience
           </h2>
-          <div className="mt-2 flex justify-start space-x-2">
+          <div className="mt-6 flex justify-start space-x-2">
             <div className="w-16 h-1 bg-blue-500 rounded"></div>
             <div className="w-4 h-1 bg-blue-300 rounded"></div>
           </div>
