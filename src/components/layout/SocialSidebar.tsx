@@ -16,7 +16,7 @@ export function SocialSidebar() {
         },
 
         {
-          href: "https://linkedin.com/hafidzph",
+          href: "https://www.linkedin.com/in/hafidzph/",
           icon: <FaLinkedinIn size={20} />,
           label: "LinkedIn",
         },
